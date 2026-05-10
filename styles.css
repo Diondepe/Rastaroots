@@ -18,7 +18,7 @@ html{
 
 body{
   margin:0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color:var(--ink);
   background:var(--cream);
 }
@@ -28,18 +28,20 @@ img{
   display:block;
 }
 
+/* HEADER */
+
 .site-header{
   position:sticky;
   top:0;
-  z-index:20;
+  z-index:100;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:30px;
-  padding:18px 6vw;
-  background:rgba(243,229,207,.94);
+  padding:16px 6vw;
+  background:rgba(243,229,207,.96);
   backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(6,63,38,.14);
+  border-bottom:1px solid rgba(6,63,38,.12);
 }
 
 .brand{
@@ -49,16 +51,17 @@ img{
 }
 
 .banner-logo{
-  width:430px;
-  max-width:42vw;
+  width:260px;
   height:auto;
-  border-radius:18px;
+  display:block;
+  border-radius:12px;
 }
 
 .nav{
   display:flex;
-  gap:28px;
   align-items:center;
+  gap:34px;
+  margin-left:auto;
   font-weight:800;
   font-size:1rem;
 }
@@ -66,19 +69,22 @@ img{
 .nav a{
   color:var(--green);
   text-decoration:none;
+  transition:.2s ease;
 }
 
 .nav a:hover{
   color:var(--gold);
 }
 
+/* HERO */
+
 .hero{
-  min-height:86vh;
+  min-height:88vh;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:44px;
+  gap:60px;
   align-items:center;
-  padding:80px 6vw 60px;
+  padding:70px 6vw 60px;
 }
 
 .eyebrow{
@@ -86,22 +92,23 @@ img{
   text-transform:uppercase;
   letter-spacing:.22em;
   font-weight:900;
-  font-size:.78rem;
+  font-size:.8rem;
+  margin-bottom:18px;
 }
 
 h1,h2,h3{
-  font-family: Georgia, "Times New Roman", serif;
+  font-family:Georgia, "Times New Roman", serif;
   color:var(--green);
-  line-height:.98;
+  line-height:.95;
   margin:0 0 18px;
 }
 
 h1{
-  font-size:clamp(3.3rem,8vw,7.4rem);
+  font-size:clamp(3rem,8vw,7rem);
 }
 
 h2{
-  font-size:clamp(2.3rem,5vw,4.8rem);
+  font-size:clamp(2.2rem,5vw,4.6rem);
 }
 
 h3{
@@ -109,26 +116,29 @@ h3{
 }
 
 .lead{
-  font-size:1.25rem;
+  font-size:1.22rem;
   line-height:1.7;
   max-width:680px;
 }
 
 .actions{
   display:flex;
-  gap:14px;
+  gap:16px;
   flex-wrap:wrap;
-  margin-top:28px;
+  margin-top:34px;
 }
+
+/* BUTTONS */
 
 .button,
 button{
   border:0;
   border-radius:999px;
-  padding:15px 24px;
+  padding:15px 26px;
   font-weight:900;
   text-decoration:none;
   cursor:pointer;
+  transition:.2s ease;
   display:inline-block;
 }
 
@@ -138,33 +148,47 @@ button{
   color:var(--white);
 }
 
+.primary:hover{
+  background:#0d5f39;
+}
+
 .secondary{
   background:var(--white);
   color:var(--green);
-  border:1px solid rgba(6,63,38,.25);
+  border:1px solid rgba(6,63,38,.18);
 }
+
+.secondary:hover{
+  background:#f8f2e8;
+}
+
+/* IMAGES */
 
 .hero-image img,
 .wide-image img,
 .split img,
 .product img{
-  border-radius:28px;
-  box-shadow:0 22px 60px rgba(6,63,38,.18);
+  border-radius:30px;
+  box-shadow:0 22px 60px rgba(6,63,38,.16);
 }
 
+/* SECTIONS */
+
 .section{
-  padding:80px 6vw;
+  padding:90px 6vw;
 }
 
 .section-heading{
   text-align:center;
-  max-width:900px;
-  margin:0 auto 42px;
+  max-width:920px;
+  margin:0 auto 50px;
 }
+
+/* CARDS */
 
 .cards{
   display:grid;
-  gap:24px;
+  gap:28px;
 }
 
 .three{
@@ -173,31 +197,38 @@ button{
 
 .card{
   background:var(--white);
-  border:1px solid rgba(6,63,38,.12);
-  border-radius:28px;
-  padding:22px;
+  border:1px solid rgba(6,63,38,.1);
+  border-radius:30px;
+  padding:24px;
   box-shadow:0 16px 40px rgba(6,63,38,.08);
 }
 
 .card p{
-  line-height:1.6;
+  line-height:1.7;
 }
 
 .card a{
   color:var(--green);
   font-weight:900;
+  text-decoration:none;
+}
+
+.card a:hover{
+  color:var(--gold);
 }
 
 .product img{
   aspect-ratio:1/1;
   object-fit:cover;
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
+
+/* SPLIT */
 
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:42px;
+  gap:50px;
   align-items:center;
 }
 
@@ -205,12 +236,14 @@ button{
   background:#ead8b9;
 }
 
+/* LISTS */
+
 .ticks{
   padding:0;
+  margin-top:28px;
   list-style:none;
   display:grid;
-  gap:12px;
-  margin-top:28px;
+  gap:14px;
   font-weight:800;
 }
 
@@ -219,6 +252,8 @@ button{
   color:var(--gold);
   margin-right:10px;
 }
+
+/* DARK SECTION */
 
 .dark{
   background:var(--green);
@@ -239,8 +274,18 @@ button{
   color:var(--green);
 }
 
+.gold-button:hover{
+  background:#d0a54b;
+}
+
+/* SUBSCRIBE */
+
 .subscribe{
-  background:linear-gradient(180deg,var(--cream),#e7cfaa);
+  background:linear-gradient(
+    180deg,
+    var(--cream),
+    #e7cfaa
+  );
 }
 
 .subscribe-box{
@@ -248,13 +293,15 @@ button{
   margin:auto;
   text-align:center;
   background:var(--white);
-  border-radius:32px;
-  padding:42px;
+  border-radius:34px;
+  padding:50px;
   box-shadow:0 22px 60px rgba(6,63,38,.14);
 }
 
+/* FOOTER */
+
 .footer{
-  padding:36px 6vw;
+  padding:40px 6vw;
   text-align:center;
   background:#052c1b;
   color:var(--white);
@@ -266,24 +313,9 @@ button{
   border-radius:12px;
 }
 
-@media (max-width: 980px){
-  .site-header{
-    flex-direction:column;
-    align-items:center;
-    padding:16px 5vw;
-  }
+/* RESPONSIVE */
 
-  .banner-logo{
-    width:520px;
-    max-width:90vw;
-  }
-
-  .nav{
-    gap:16px;
-    flex-wrap:wrap;
-    justify-content:center;
-    font-size:.92rem;
-  }
+@media (max-width:1100px){
 
   .hero,
   .split,
@@ -292,28 +324,73 @@ button{
   }
 
   .hero{
-    padding-top:48px;
+    padding-top:50px;
   }
 
   .hero-copy{
     order:2;
   }
+
+  .nav{
+    gap:20px;
+  }
 }
 
-@media (max-width: 560px){
+@media (max-width:760px){
+
+  .site-header{
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:18px 5vw;
+  }
+
+  .banner-logo{
+    width:240px;
+  }
+
+  .nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
+    font-size:.92rem;
+    margin-left:0;
+  }
+
+  .section{
+    padding:70px 5vw;
+  }
+
+  .subscribe-box{
+    padding:34px 24px;
+  }
+
+  h1{
+    font-size:clamp(2.6rem,12vw,5rem);
+  }
+}
+
+@media (max-width:560px){
+
   .nav{
     display:none;
   }
 
   .banner-logo{
-    max-width:92vw;
+    width:210px;
   }
 
-  .section{
-    padding:60px 5vw;
+  .hero{
+    gap:34px;
   }
 
-  .subscribe-box{
-    padding:30px 22px;
+  .actions{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .button{
+    width:100%;
+    text-align:center;
   }
 }
