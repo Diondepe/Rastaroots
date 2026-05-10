@@ -35,45 +35,76 @@ img{
   position:sticky;
   top:0;
   z-index:100;
-  display:grid;
-  grid-template-columns:1fr;
-  padding:0;
-  background:rgba(243,229,207,.97);
-  border-bottom:1px solid rgba(6,63,38,.13);
+  background:#efe1c8;
+  border-bottom:1px solid rgba(6,63,38,.12);
 }
 
-.brand{
+.top-banner{
   width:100%;
-  display:block;
+  padding:18px 5vw;
+}
+
+.top-banner-inner{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
 }
 
 .banner-logo{
-  width:100%;
-  height:170px;
-  object-fit:cover;
-  object-position:center;
+  width:780px;
+  max-width:58vw;
+  height:auto;
   display:block;
 }
 
 .nav{
   display:flex;
   align-items:center;
-  justify-content:center;
-  gap:42px;
-  padding:16px 6vw;
+  gap:36px;
   font-weight:900;
   font-size:1.05rem;
   white-space:nowrap;
-  background:rgba(243,229,207,.97);
 }
 
 .nav a{
-  color:var(--green);
+  color:#063f26;
   text-decoration:none;
 }
 
 .nav a:hover{
-  color:var(--gold);
+  color:#b8913f;
+}
+
+@media (max-width:1100px){
+
+  .top-banner-inner{
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  .banner-logo{
+    width:100%;
+    max-width:1000px;
+  }
+
+  .nav{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+}
+
+@media (max-width:560px){
+
+  .nav{
+    display:none;
+  }
+
+  .banner-logo{
+    width:100%;
+    max-width:100%;
+  }
 }
 
 /* HERO */
