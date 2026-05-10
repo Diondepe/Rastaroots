@@ -1,5 +1,14 @@
-const year = document.getElementById("year");
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileNav = document.querySelector("#mobileNav");
 
-if (year) {
-  year.textContent = new Date().getFullYear();
+if (menuToggle && mobileNav) {
+  menuToggle.addEventListener("click", () => {
+    mobileNav.classList.toggle("active");
+  });
+
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("active");
+    });
+  });
 }
