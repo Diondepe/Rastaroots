@@ -45,12 +45,12 @@ img{
   align-items:center;
   justify-content:space-between;
   gap:40px;
-  padding:20px 6vw;
+  padding:24px 4vw;
 }
 
 .brand{
   flex:1;
-  max-width:760px;
+  max-width:900px;
 }
 
 .banner-logo{
