@@ -24,16 +24,11 @@ img{max-width:100%;display:block}
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(6,63,38,.12);
 }
-.brand img{width:150px;border-radius:14px}
-.nav{display:flex;gap:24px;font-weight:700}
-.nav a{color:var(--green);text-decoration:none}
-.hero{
-  min-height:86vh;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-  padding:70px 6vw 50px;
+.banner-logo{
+  width:420px;
+  max-width:100%;
+  height:auto;
+  display:block;
 }
 .eyebrow{
   color:var(--green2);
