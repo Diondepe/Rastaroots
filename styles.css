@@ -18,8 +18,7 @@ html{
 
 body{
   margin:0;
-  font-family:Inter, ui-sans-serif, system-ui, -apple-system,
-  BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color:var(--ink);
   background:var(--cream);
 }
@@ -35,76 +34,51 @@ img{
   position:sticky;
   top:0;
   z-index:100;
-  background:#efe1c8;
-  border-bottom:1px solid rgba(6,63,38,.12);
+  background:rgba(243,229,207,.97);
+  border-bottom:1px solid rgba(6,63,38,.13);
 }
 
-.top-banner{
-  width:100%;
-  padding:18px 5vw;
-}
-
-.top-banner-inner{
+.header-inner{
   width:100%;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:40px;
+  gap:36px;
+  padding:18px 6vw;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  flex-shrink:0;
 }
 
 .banner-logo{
-  width:780px;
-  max-width:58vw;
+  width:360px;
+  max-width:34vw;
   height:auto;
   display:block;
+  border-radius:14px;
 }
 
 .nav{
   display:flex;
   align-items:center;
-  gap:36px;
+  gap:34px;
+  margin-left:auto;
   font-weight:900;
   font-size:1.05rem;
   white-space:nowrap;
 }
 
 .nav a{
-  color:#063f26;
+  color:var(--green);
   text-decoration:none;
 }
 
 .nav a:hover{
-  color:#b8913f;
-}
-
-@media (max-width:1100px){
-
-  .top-banner-inner{
-    flex-direction:column;
-    justify-content:center;
-  }
-
-  .banner-logo{
-    width:100%;
-    max-width:1000px;
-  }
-
-  .nav{
-    justify-content:center;
-    flex-wrap:wrap;
-  }
-}
-
-@media (max-width:560px){
-
-  .nav{
-    display:none;
-  }
-
-  .banner-logo{
-    width:100%;
-    max-width:100%;
-  }
+  color:var(--gold);
 }
 
 /* HERO */
@@ -170,7 +144,6 @@ button{
   text-decoration:none;
   cursor:pointer;
   display:inline-block;
-  transition:.2s ease;
 }
 
 .primary,
@@ -179,18 +152,10 @@ button{
   color:var(--white);
 }
 
-.primary:hover{
-  background:#0b5a35;
-}
-
 .secondary{
   background:var(--white);
   color:var(--green);
   border:1px solid rgba(6,63,38,.18);
-}
-
-.secondary:hover{
-  background:#faf3e7;
 }
 
 /* IMAGES */
@@ -305,18 +270,10 @@ button{
   color:var(--green);
 }
 
-.gold-button:hover{
-  background:#d0a54b;
-}
-
 /* SUBSCRIBE */
 
 .subscribe{
-  background:linear-gradient(
-    180deg,
-    var(--cream),
-    #e7cfaa
-  );
+  background:linear-gradient(180deg,var(--cream),#e7cfaa);
 }
 
 .subscribe-box{
@@ -346,29 +303,15 @@ button{
 
 /* RESPONSIVE */
 
-@media (max-width:1200px){
-
-  .banner-logo{
-    width:540px;
-    max-width:55vw;
-  }
-
-  .nav{
-    gap:22px;
-    font-size:1rem;
-  }
-}
-
-@media (max-width:980px){
-
-  .site-header{
+@media (max-width:1100px){
+  .header-inner{
     flex-direction:column;
     justify-content:center;
     gap:18px;
   }
 
   .banner-logo{
-    width:720px;
+    width:520px;
     max-width:92vw;
   }
 
@@ -390,13 +333,13 @@ button{
 }
 
 @media (max-width:560px){
-
   .nav{
     display:none;
   }
 
   .banner-logo{
     width:92vw;
+    max-width:92vw;
   }
 
   .section{
