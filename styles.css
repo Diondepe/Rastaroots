@@ -31,36 +31,43 @@ img{
 /* HEADER */
 
 .site-header{
+  width:100%;
   background:#efe1c8;
-  border-bottom:1px solid rgba(6,63,38,.12);
+  border-bottom:1px solid rgba(6,63,38,.14);
 }
 
 .header-inner{
+  width:100%;
+  min-height:135px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:40px;
-  padding:18px 5vw;
+  gap:42px;
+  padding:18px 6vw;
 }
 
 .brand{
-  flex:1;
-  max-width:900px;
+  display:flex;
+  align-items:center;
+  width:560px;
+  max-width:46vw;
+  flex-shrink:0;
 }
 
 .banner-logo{
   width:100%;
-  height:auto;
-  display:block;
+  height:115px;
+  object-fit:contain;
+  object-position:left center;
 }
 
 .nav{
   display:flex;
   align-items:center;
+  justify-content:flex-end;
   gap:34px;
-  flex-shrink:0;
   font-weight:900;
-  font-size:1.05rem;
+  font-size:1.08rem;
   white-space:nowrap;
 }
 
@@ -76,12 +83,11 @@ img{
 /* HERO */
 
 .hero{
-  min-height:auto;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
   align-items:center;
-  padding:70px 6vw 70px;
+  padding:70px 6vw 80px;
 }
 
 .eyebrow{
@@ -316,12 +322,17 @@ button{
   }
 
   .brand{
-    max-width:100%;
+    width:760px;
+    max-width:92vw;
+  }
+
+  .banner-logo{
+    height:auto;
   }
 
   .nav{
-    flex-wrap:wrap;
     justify-content:center;
+    flex-wrap:wrap;
   }
 
   .hero,
@@ -338,6 +349,10 @@ button{
 @media (max-width:560px){
   .nav{
     display:none;
+  }
+
+  .brand{
+    width:92vw;
   }
 
   .section{
